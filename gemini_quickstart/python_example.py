@@ -11,26 +11,27 @@ client = Groq(
 )
 
 def run():
-    try:
-        print("User: Tell me a joke about coding.")
+    print("--- Groq Chatbot (Type 'quit' to exit) ---")
+    while True:
+        try:
+            user_input = input("You: ")
+            if user_input.lower() in ['quit', 'exit']:
+                break
 
-        # 3. Generate Chat Completion
-        # Using llama-3.1-8b-instant for speed and efficiency.
-        chat_completion = client.chat.completions.create(
-            messages=[
-                {
-                    "role": "user",
-                    "content": "Tell me a joke about coding.",
-                }
-            ],
-            model="llama-3.1-8b-instant",
-        )
+            chat_completion = client.chat.completions.create(
+                messages=[
+                    {
+                        "role": "user",
+                        "content": user_input,
+                    }
+                ],
+                model="llama-3.1-8b-instant",
+            )
 
-        # 4. Output Response
-        print(f"Groq: {chat_completion.choices[0].message.content}")
+            print(f"Groq: {chat_completion.choices[0].message.content}\n")
 
-    except Exception as e:
-        print(f"Error: {e}")
+        except Exception as e:
+            print(f"Error: {e}")
 
 if __name__ == "__main__":
     run()
