@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* FinMate Design System - Friendly Finance */
+    --background: 210 40% 98%;
+    --foreground: 220 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
+
+    /* Primary - Friendly Teal Blue */
+    --primary: 195 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 195 85% 92%;
+    --primary-glow: 195 100% 70%;
+
+    /* Secondary - Soft Lavender */
+    --secondary: 260 60% 95%;
+    --secondary-foreground: 260 40% 35%;
+
+    /* Muted */
+    --muted: 210 30% 95%;
+    --muted-foreground: 220 15% 50%;
+
+    /* Accent - Coral Pink for Gamification */
+    --accent: 350 90% 65%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 350 90% 95%;
+
+    /* Success - Fresh Mint Green */
+    --success: 160 70% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 160 70% 92%;
+
+    /* Warning - Warm Amber */
+    --warning: 38 95% 55%;
+    --warning-foreground: 38 95% 15%;
+    --warning-light: 38 95% 92%;
+
+    /* Destructive - Soft Coral */
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* XP/Gamification Colors */
+    --xp: 45 100% 55%;
+    --xp-foreground: 45 100% 15%;
+    --streak: 25 100% 55%;
+    --badge-bronze: 30 60% 50%;
+    --badge-silver: 210 10% 70%;
+    --badge-gold: 45 100% 50%;
+
+    /* Category Colors */
+    --category-food: 15 85% 55%;
+    --category-transport: 200 85% 50%;
+    --category-shopping: 280 70% 60%;
+    --category-bills: 170 60% 45%;
+    --category-entertainment: 330 75% 55%;
+    --category-health: 140 65% 45%;
+
+    --border: 210 30% 90%;
+    --input: 210 30% 90%;
+    --ring: 195 85% 45%;
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(195 85% 45%), hsl(210 80% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(350 90% 65%), hsl(330 85% 60%));
+    --gradient-success: linear-gradient(135deg, hsl(160 70% 45%), hsl(140 65% 50%));
+    --gradient-xp: linear-gradient(135deg, hsl(45 100% 55%), hsl(35 100% 50%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    --gradient-hero: linear-gradient(135deg, hsl(195 85% 45%) 0%, hsl(260 60% 55%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(220 30% 15% / 0.08);
+    --shadow-md: 0 4px 16px -4px hsl(220 30% 15% / 0.12);
+    --shadow-lg: 0 8px 32px -8px hsl(220 30% 15% / 0.16);
+    --shadow-glow: 0 0 24px -4px hsl(195 85% 45% / 0.4);
+    --shadow-accent: 0 4px 20px -4px hsl(350 90% 65% / 0.4);
+
+    /* Sidebar (using app colors) */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 30% 15%;
+    --sidebar-primary: 195 85% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 30% 95%;
+    --sidebar-accent-foreground: 220 30% 15%;
+    --sidebar-border: 210 30% 90%;
+    --sidebar-ring: 195 85% 45%;
+  }
+
+  .dark {
+    --background: 220 30% 8%;
+    --foreground: 210 30% 95%;
+
+    --card: 220 30% 12%;
+    --card-foreground: 210 30% 95%;
+
+    --popover: 220 30% 12%;
+    --popover-foreground: 210 30% 95%;
+
+    --primary: 195 85% 50%;
+    --primary-foreground: 220 30% 8%;
+    --primary-light: 195 50% 20%;
+
+    --secondary: 260 30% 20%;
+    --secondary-foreground: 260 40% 85%;
+
+    --muted: 220 25% 18%;
+    --muted-foreground: 210 20% 60%;
+
+    --accent: 350 85% 60%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 350 40% 20%;
+
+    --success: 160 65% 40%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 160 40% 15%;
+
+    --warning: 38 90% 50%;
+    --warning-foreground: 38 95% 95%;
+    --warning-light: 38 50% 15%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 195 85% 50%;
+
+    --sidebar-background: 220 30% 10%;
+    --sidebar-foreground: 210 30% 95%;
+    --sidebar-primary: 195 85% 50%;
+    --sidebar-primary-foreground: 220 30% 8%;
+    --sidebar-accent: 220 25% 18%;
+    --sidebar-accent-foreground: 210 30% 95%;
+    --sidebar-border: 220 25% 20%;
+    --sidebar-ring: 195 85% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* Chat Bubbles */
+  .chat-bubble-user {
+    @apply bg-primary text-primary-foreground rounded-2xl rounded-br-md px-4 py-3;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .chat-bubble-bot {
+    @apply bg-card text-card-foreground rounded-2xl rounded-bl-md px-4 py-3 border border-border;
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* XP Bar */
+  .xp-bar {
+    @apply h-3 rounded-full overflow-hidden;
+    background: hsl(var(--muted));
+  }
+
+  .xp-bar-fill {
+    @apply h-full rounded-full transition-all duration-500;
+    background: var(--gradient-xp);
+  }
+
+  /* Badge Styles */
+  .badge-bronze {
+    background: linear-gradient(135deg, hsl(30 60% 50%), hsl(25 50% 40%));
+  }
+
+  .badge-silver {
+    background: linear-gradient(135deg, hsl(210 10% 75%), hsl(210 10% 60%));
+  }
+
+  .badge-gold {
+    background: linear-gradient(135deg, hsl(45 100% 55%), hsl(35 100% 45%));
+  }
+
+  /* Category Pills */
+  .category-food {
+    @apply bg-[hsl(15_85%_95%)] text-[hsl(15_85%_40%)];
+  }
+
+  .category-transport {
+    @apply bg-[hsl(200_85%_95%)] text-[hsl(200_85%_35%)];
+  }
+
+  .category-shopping {
+    @apply bg-[hsl(280_70%_95%)] text-[hsl(280_70%_40%)];
+  }
+
+  .category-bills {
+    @apply bg-[hsl(170_60%_92%)] text-[hsl(170_60%_30%)];
+  }
+
+  .category-entertainment {
+    @apply bg-[hsl(330_75%_95%)] text-[hsl(330_75%_40%)];
+  }
+
+  .category-health {
+    @apply bg-[hsl(140_65%_92%)] text-[hsl(140_65%_30%)];
+  }
+
+  /* Glass Card Effect */
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-lg border border-border/50;
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Floating Action Button */
+  .fab {
+    @apply fixed bottom-24 right-4 w-14 h-14 rounded-full flex items-center justify-center;
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Quick Action Chip */
+  .action-chip {
+    @apply px-4 py-2 rounded-full text-sm font-medium border border-border bg-card hover:bg-muted transition-all duration-200;
+  }
+
+  .action-chip:hover {
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-1px);
+  }
+
+  /* Stat Card */
+  .stat-card {
+    @apply p-4 rounded-2xl bg-card border border-border;
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Navigation */
+  .nav-item {
+    @apply flex flex-col items-center gap-1 py-2 px-3 rounded-xl transition-all duration-200;
+  }
+
+  .nav-item.active {
+    @apply bg-primary/10 text-primary;
+  }
+
+  .nav-item:not(.active) {
+    @apply text-muted-foreground hover:text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+  }
+
+  .animate-bounce-subtle {
+    animation: bounce-subtle 1s ease-in-out;
+  }
+
+  .animate-confetti {
+    animation: confetti 0.8s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.3s ease-out;
+  }
+
+  .animate-pop {
+    animation: pop 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* Gradient text */
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-xp {
+    background: var(--gradient-xp);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes confetti {
+  0% { transform: scale(0) rotate(0deg); opacity: 1; }
+  50% { transform: scale(1.2) rotate(180deg); opacity: 1; }
+  100% { transform: scale(1) rotate(360deg); opacity: 1; }
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
